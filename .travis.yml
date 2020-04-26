@@ -8,4 +8,4 @@ before_install:
   - docker build -t anurag/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run anurag/docker-react npm run test -- --coverage
+  - docker run -e CI=true anurag/docker-react npm run test -- --coverage
